@@ -1,22 +1,22 @@
 ## mongodb-examples
 
-### BASICS
-1) Entrar no container de mongodb:
+## BASICS
+1) Access mongodb container:
 > docker exec -it containerid bash
 
-2) Iniciar/acessar o mongo:
+2) Init mongo:
 > mongo
 
-3) Bancos:
+3) Databases:
 > show dbs
 
-4) Usar determinado banco:
+4) Use database:
 > use mymoney
 
-5) Saber o banco que estou: 
+5) What database I'm: 
 > db
 
-6) Visualizar collections:
+6) Show collections:
 > show collections
 
 7) Create collection:
@@ -54,7 +54,7 @@
 > db.billingCycle.find().pretty();
 > db.billingCycle.find({$or: [{month: 1}, {month: 2}]}).pretty();
 
-2) Exibir somente atributos que possuem o atributo "credits"
+2) Show only docs who has "credits"
 > db.billingCycle.find({credits:{$exists: true}}).pretty();
 
 3) FIND ONE - return first doc or by filter
