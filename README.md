@@ -1,4 +1,4 @@
-## mongodb-examples
+## MongoDB
 
 ## BASICS
 1) Access mongodb container:
@@ -28,7 +28,7 @@
 9) Drop current database:
 > db.dropDatabase()
 
-### INSERT DATA
+## INSERT DATA
 1) Insert (collection doesn't need to be created)
 > db.billingCycle.insert({name: "Jan-2019, month: 1, year: 2019});
 > db.billingCycle.insert({
@@ -48,7 +48,7 @@
 > db.billingCycle.save({name: "Fev-2019, month: 2, year: 2019});
 > db.billingCycle.save({_id: "32009diasdi090923u0jd0", name: "Fev-2019, month: 2, year: 2019});
 
-### QUERY
+## QUERY
 1) FIND - Returns all documents or by filter
 > db.billingCycle.find();
 > db.billingCycle.find().pretty();
@@ -68,7 +68,7 @@
 5) Return only name of credits
 > db.billingCycle.find({credits:{$exists:true}}, {_id:0, name:1}).pretty();
 
-### AGGREGATION
+## AGGREGATION
 1) New aggregation
 > db.billingCycle.aggregate([{
     $project:{credit:{$sum:"$credits.value"}, debt:{$sum:"$debts.value"}}
@@ -77,17 +77,17 @@
   }
 ]);
 
-### UPDATE
+## UPDATE
 1) Update collection
 > db.billingCycle.update(
   {$and:[{month: 1}, {year: 2019}]},
   {$set:{credits:[{name: "Salário", value: 10000}]}}
 )
 
-### COUNT
+## COUNT
 > db.billingCycle.count();
 
-### REMOVE
+## REMOVE
 1) Removing by filter
 > db.billingCycle.remove({month: 2});
 
