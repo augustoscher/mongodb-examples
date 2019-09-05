@@ -74,7 +74,7 @@ db.billingCycle.findOne({month: 2});
 ```
 
 4) Pagination  
-```db.billingCycle.find({year: 2019}).skip(1);```
+```db.billingCycle.find({year: 2019}).skip(1);```  
 ```db.billingCycle.find({year: 2019}).skip(1).limit(1);```
 
 5) Return only name of credits  
