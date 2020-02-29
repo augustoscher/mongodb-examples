@@ -2,6 +2,11 @@
 
 ## BASICS
 1) Access mongodb container: ```docker exec -it containerid bash```
+  
+  Or
+  
+  ```docker exec -it mongodb bash```
+  ```mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin```
 
 2) Init mongo: ```mongo```
 
@@ -18,12 +23,13 @@
 8) Drop collection: ```db.test.drop()```
 
 9) Drop current database: ```db.dropDatabase()```
+    
+10) Create user: ```db.getSiblingDB('heroes').createUser({user: 'augustoscher', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'heroes'}]})```
+    
 
 ## INSERT DATA
 1) Insert (collection doesn't need to be created):  
-```
-db.billingCycle.insert({name: "Jan-2019, month: 1, year: 2019});
-```
+```db.billingCycle.insert({name: "Jan-2019, month: 1, year: 2019});```
 
 ```
 db.billingCycle.insert({
