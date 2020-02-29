@@ -29,7 +29,7 @@
 
 ## INSERT DATA
 1) Insert (collection doesn't need to be created):  
-```db.billingCycle.insert({name: "Jan-2019, month: 1, year: 2019});```
+```db.billingCycle.insert({name: "Jan-2019", month: 1, year: 2019});```
 
 ```
 db.billingCycle.insert({
