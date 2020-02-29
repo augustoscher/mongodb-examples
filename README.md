@@ -1,10 +1,8 @@
 ## MongoDB
 
 ## BASICS
-1) Access mongodb container: ```docker exec -it containerid bash```
-  
+1) Access mongodb container: ```docker exec -it containerid bash```  
   Or
-  
   ```docker exec -it mongodb bash```
   ```mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin```
 
